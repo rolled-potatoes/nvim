@@ -1,7 +1,11 @@
-require('base')
 require('keymaps')
-require('plugins')
-require('highlights')
+
+if vim.g.vscode then
+else
+  require('base')
+  require('plugins')
+  require('highlights')
+end
 
 local has = function(x)
   return vim.fn.has(x) == 1
