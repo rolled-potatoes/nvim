@@ -41,4 +41,7 @@ else
   keymap.set('n', '<C-w><right>', '<C-w>>')
   keymap.set('n', '<C-w><up>', '<C-w>+')
   keymap.set('n', '<C-w><down>', '<C-w>-')
+
+  -- Prettier
+  keymap.set('n', '<Leader>p', ':Prettier<CR>')
 end
