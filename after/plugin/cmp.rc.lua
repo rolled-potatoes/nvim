@@ -15,6 +15,9 @@ cmp.setup({
       require('luasnip').lsp_expand(args.body)
     end
   },
+  window = {
+    documentation = cmp.config.window.bordered()
+  },
   mapping = cmp.mapping.preset.insert({
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -23,10 +26,14 @@ cmp.setup({
     ['<C-e>'] = cmp.mapping.close(),
   }),
   sources = cmp.config.sources({
+    { name = 'path' },
     { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  }, {
     { name = 'buffer' },
   }),
   formatting = {
+    fields = { 'menu', 'abbr', 'kind' },
     format = lspkind.cmp_format({
       wirth_text = false,
       maxWidth = 50,
