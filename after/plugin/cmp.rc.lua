@@ -9,6 +9,7 @@ cmp.setup({
   function()
     local buftype = vim.api.nvim_buf_get_option(0, "buftype")
     if buftype == "prompt" then return false end
+    return true
   end,
   snippet = {
     expand = function(args)
