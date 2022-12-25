@@ -43,4 +43,9 @@ packer.startup(function(use)
   use 'glepnir/lspsaga.nvim'
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+  })
+  use { 'saadparwaiz1/cmp_luasnip' }
 end)
