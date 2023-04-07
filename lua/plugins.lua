@@ -12,6 +12,9 @@ packer.startup(function(use)
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
+  use {
+    'catppuccin/nvim'
+  }
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'onsails/lspkind-nvim' -- suggestion 을 vscode 처럼 보이도록
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
