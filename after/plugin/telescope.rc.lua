@@ -52,7 +52,10 @@ local opts = {
 vim.keymap.set('n', ';f', function()
   builtin.find_files({
     no_ignore = false,
-    hidden = true
+    hidden = true,
+    width = 0.4,
+    height = 0.4,
+    prompt_position = "top"
   })
 end
   , opts)
@@ -80,6 +83,6 @@ vim.keymap.set('n', ';s', function()
     grouped = true,
     previewer = false,
     initial_mode = "normal",
-    layout_config = { height = 40 }
+    layout_config = { height = 0.4 }
   })
 end)
