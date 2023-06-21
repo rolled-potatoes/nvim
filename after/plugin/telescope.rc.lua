@@ -53,9 +53,12 @@ vim.keymap.set('n', ';f', function()
   builtin.find_files({
     no_ignore = false,
     hidden = true,
-    width = 0.4,
-    height = 0.4,
-    prompt_position = "top"
+    previewer = false,
+    layout_config = {
+      width = 0.4,
+      height = 0.4,
+      prompt_position = "top"
+    }
   })
 end
   , opts)
