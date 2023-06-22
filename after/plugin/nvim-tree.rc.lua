@@ -8,7 +8,8 @@ vim.g.loaded_netrwPlugin = 1
 nerdTree.setup({
   sort_by = "name",
   view = {
-   adaptive_size = true,
+   adaptive_size = false,
+   number=true,
    mappings = {
      custom_only = true,
      list = {
@@ -60,10 +61,10 @@ nerdTree.setup({
    }
  },
  renderer = {
-   group_empty = true,
+   group_empty = false,
  },
  filters = {
-   dotfiles = true,
+   dotfiles = false,
  },
 })
 
