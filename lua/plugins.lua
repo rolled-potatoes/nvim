@@ -7,6 +7,16 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
+  use({
+    "kdheepak/lazygit.nvim",
+    requires = {
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim",
+    },
+    config = function()
+        require("telescope").load_extension("lazygit")
+    end,
+})
   use 'folke/tokyonight.nvim'
   use 'wbthomason/packer.nvim'
   use 'nvim-lualine/lualine.nvim' -- Statusline
