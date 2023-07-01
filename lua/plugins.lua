@@ -37,7 +37,16 @@ packer.startup(function(use)
     tag = 'v2.*'
   }
   use 'norcalli/nvim-colorizer.lua'
-  use 'glepnir/lspsaga.nvim'
+  use({
+    'glepnir/lspsaga.nvim',
+    opt = true,
+    branch = 'main',
+    event = 'LspAttach',
+    requires = {
+      {"nvim-tree/nvim-web-devicons"},
+      {"nvim-treesitter/nvim-treesitter"}
+    }
+  })
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
   use({
