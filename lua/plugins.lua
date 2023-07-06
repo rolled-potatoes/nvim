@@ -44,7 +44,16 @@ packer.startup(function(use)
     tag = 'v2.*'
   }
   use 'norcalli/nvim-colorizer.lua'
-  use 'glepnir/lspsaga.nvim'
+  use({
+    'glepnir/lspsaga.nvim',
+    opt = true,
+    branch = 'main',
+    event = 'LspAttach',
+    requires = {
+      {"nvim-tree/nvim-web-devicons"},
+      {"nvim-treesitter/nvim-treesitter"}
+    }
+  })
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'MunifTanjim/prettier.nvim'
   use({
@@ -52,4 +61,15 @@ packer.startup(function(use)
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
   })
   use { 'saadparwaiz1/cmp_luasnip' }
+  use({
+     "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+        "nvim-lua/plenary.nvim",
+    },
+  })
+  use ( {
+    "akinsho/toggleterm.nvim",
+    tag = '*'
+  } )
 end)
