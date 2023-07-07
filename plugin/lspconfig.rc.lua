@@ -23,6 +23,11 @@ nvim_lsp.cssls.setup{
   capabilities = capabilities,
 }
 
+nvim_lsp.cssmodules_ls.setup{
+  cmd = { "cssmodules-language-server" },
+  filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+}
+
 nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
   settings = {
