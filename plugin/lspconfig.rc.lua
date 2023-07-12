@@ -13,6 +13,17 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" }
 }
 
+nvim_lsp.cssls.setup{
+  on_attach = on_attach,
+  filetypes = { "css", "scss", "less" },
+  cmd = { "vscode-css-language-server", "--stdio" }
+}
+nvim_lsp.cssmodules_ls.setup{
+  on_attach = on_attach,
+  cmd={ "cssmodules-language-server" },
+  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
+}
+
 nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
   settings = {
