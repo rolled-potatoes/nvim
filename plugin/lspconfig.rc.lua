@@ -13,11 +13,16 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" }
 }
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 nvim_lsp.cssls.setup{
   on_attach = on_attach,
   filetypes = { "css", "scss", "less" },
-  cmd = { "vscode-css-language-server", "--stdio" }
+  cmd = { "vscode-css-language-server", "--stdio" },
+  capabilities = capabilities,
 }
+
 nvim_lsp.cssmodules_ls.setup{
   on_attach = on_attach,
   cmd={ "cssmodules-language-server" },
