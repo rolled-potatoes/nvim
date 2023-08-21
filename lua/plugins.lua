@@ -29,6 +29,7 @@ packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   } -- highlight
+  use "ziontee113/syntax-tree-surfer"
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
   use 'nvim-lua/plenary.nvim'
