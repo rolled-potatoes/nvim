@@ -49,7 +49,7 @@ end
 local COMMON = {
   parse('func', 'function ${1}({${2}}){\n${3}\n}'),
   parse('cfunc', 'const ${1} = ({${2}}) =>{\n${3}\n}'),
-  parse('log', 'console.log({\n${1}\n})')
+  parse('log', 'console.log(\n${1}\n)')
 }
 
 local REACT = {
@@ -68,6 +68,12 @@ local REACT = {
       { 1 }
     ),
     t { ";" }
+  }),
+  s('ue', {
+    t {"React.useEffect(()=>{","\t\t"},
+    i(1),
+    t {"","},","["},  i(2),
+    t  "])",
   }),
   parse('cl', "className={${1}}"),
   parse('clcn', "className={cn(${1})}"),
