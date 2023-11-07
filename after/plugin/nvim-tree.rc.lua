@@ -34,6 +34,9 @@ nerdTree.setup({
  filters = {
    dotfiles = false,
  },
+  git = {
+    ignore = false,
+  }
 })
 
 
