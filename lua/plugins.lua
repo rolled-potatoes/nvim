@@ -23,7 +23,6 @@ packer.startup(function(use)
     run = ':TSUpdate'
   } -- highlight
   use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
@@ -38,10 +37,8 @@ packer.startup(function(use)
   }
   use 'norcalli/nvim-colorizer.lua'
   use({
-    'glepnir/lspsaga.nvim',
-    opt = true,
-    branch = 'main',
-    event = 'LspAttach',
+    'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
     requires = {
       {"nvim-tree/nvim-web-devicons"},
       {"nvim-treesitter/nvim-treesitter"}

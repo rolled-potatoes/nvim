@@ -9,7 +9,6 @@ ts.setup {
   },
   index = {
     enable = true,
-    disable = true
   },
   ensure_installed = {
     'tsx',
@@ -20,8 +19,9 @@ ts.setup {
     'json',
     'markdown',
     'scss',
+    'markdown_inline'
   },
   autotag = {
-    enable = true
+    enable = true,
   }
 }
