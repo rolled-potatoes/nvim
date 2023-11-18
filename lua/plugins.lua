@@ -62,4 +62,11 @@ packer.startup(function(use)
     "akinsho/toggleterm.nvim",
     tag = '*'
   } )
+  use {
+    'numToStr/Comment.nvim',
+  }
+  use{
+    "danymat/neogen",
+    requires = "nvim-treesitter/nvim-treesitter",
+  }
 end)
