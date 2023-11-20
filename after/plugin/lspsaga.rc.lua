@@ -1,6 +1,6 @@
 local status, lspsaga = pcall(require, 'lspsaga')
 
-if(not status) then 
+if(not status) then
     print('lspsaga not installed')
     return
 end
@@ -11,6 +11,9 @@ lspsaga.setup({
             quit = {'q', '<ESC>'}
         }
     },
+    lightbulb = {
+      sign = false,
+    }
 })
 
 -- shuttle = '[w' shuttle bettween the finder layout window
@@ -26,3 +29,8 @@ vim.keymap.set('n','<C-g>f',':Lspsaga finder def+ref <CR>')
 vim.keymap.set('n','<C-g>h',':Lspsaga hover_doc <CR>')
 
 vim.keymap.set('n', '[e', ':Lspsaga diagnostic_jump_next <CR>')
+
+-- toggle_or_jump = 'o' toggle or jump
+-- quit = 'q' quit outline window
+-- jump = 'e' jump to pos even on a expand/collapse node
+vim.keymap.set('n', '[',':Lspsaga outline <CR>')
