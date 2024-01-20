@@ -34,5 +34,10 @@ function copyBlockToClipboard()
   vim.fn.setreg('+', clipboard)
 end
 
+function rename ()
+  vim.lsp.buf.rename();
+end
+
 vim.keymap.set('v',"p",":lua copyBlockToClipboard()<CR>");
+vim.keymap.set('v',"<Leader>r", ":lua rename()<CR>")
 
