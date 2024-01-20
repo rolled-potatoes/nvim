@@ -44,4 +44,6 @@ else
 
   -- Prettier
   keymap.set('n', '<Leader>p', ':Prettier<CR>')
+
+  require('custom')
 end
