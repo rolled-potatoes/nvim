@@ -69,4 +69,5 @@ packer.startup(function(use)
     "danymat/neogen",
     requires = "nvim-treesitter/nvim-treesitter",
   }
+  use 'windwp/nvim-ts-autotag'
 end)
