@@ -7,7 +7,7 @@ ts.setup {
     enable = true,
     disable = {},
   },
-  index = {
+  indent = {
     enable = true,
   },
   ensure_installed = {
