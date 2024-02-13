@@ -8,9 +8,8 @@ ts.setup {
     enable = true,
     disable = {},
   },
-  index = {
+  indent = {
     enable = true,
-    disable = true
   },
   ensure_installed = {
     'tsx',
@@ -23,11 +22,20 @@ ts.setup {
     'json',
     'markdown',
     'scss',
+    'markdown_inline'
   },
   autotag = {
-    enable = true
-  },
-  indent = {
-    enable = true
+    enable = true,
+    enable_rename = true,
+    enable_close = true,
+    enable_close_on_slash = true,
+    filetypes = {
+        'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'tsx', 'jsx', 'rescript',
+        'xml',
+        'php',
+        'markdown',
+        'astro', 'glimmer', 'handlebars', 'hbs'
+    }
   }
 }
+

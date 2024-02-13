@@ -18,8 +18,8 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 nvim_lsp.cssls.setup{
   on_attach = on_attach,
-  filetypes = { "css", "scss", "less" },
-  cmd = { "vscode-css-language-server", "--stdio" },
+  cmd={ "vscode-css-language-server", "--stdio" },
+  filetypes  = { "css", "scss", "less" },
   capabilities = capabilities,
 }
 

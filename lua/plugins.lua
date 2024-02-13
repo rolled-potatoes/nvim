@@ -31,7 +31,6 @@ packer.startup(function(use)
   } -- highlight
   use "ziontee113/syntax-tree-surfer"
   use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
   use 'nvim-lua/plenary.nvim'
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
@@ -46,10 +45,8 @@ packer.startup(function(use)
   }
   use 'norcalli/nvim-colorizer.lua'
   use({
-    'glepnir/lspsaga.nvim',
-    opt = true,
-    branch = 'main',
-    event = 'LspAttach',
+    'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
     requires = {
       {"nvim-tree/nvim-web-devicons"},
       {"nvim-treesitter/nvim-treesitter"}
@@ -73,4 +70,12 @@ packer.startup(function(use)
     "akinsho/toggleterm.nvim",
     tag = '*'
   } )
+  use {
+    'numToStr/Comment.nvim',
+  }
+  use{
+    "danymat/neogen",
+    requires = "nvim-treesitter/nvim-treesitter",
+  }
+  use 'windwp/nvim-ts-autotag'
 end)
