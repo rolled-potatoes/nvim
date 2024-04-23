@@ -13,7 +13,7 @@ packer.startup(function(use)
         "nvim-telescope/telescope.nvim",
         "nvim-lua/plenary.nvim",
     },
-})
+  })
   use 'folke/tokyonight.nvim'
   use 'wbthomason/packer.nvim'
   use 'nvim-lualine/lualine.nvim' -- Statusline
@@ -59,13 +59,6 @@ packer.startup(function(use)
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
   })
   use { 'saadparwaiz1/cmp_luasnip' }
-  use({
-     "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
-    requires = {
-        "nvim-lua/plenary.nvim",
-    },
-  })
   use ( {
     "akinsho/toggleterm.nvim",
     tag = '*'
