@@ -70,4 +70,8 @@ packer.startup(function(use)
     requires = "nvim-treesitter/nvim-treesitter",
   }
   use 'windwp/nvim-ts-autotag'
+  use {
+    "luckasRanarison/tailwind-tools.nvim",
+    requires = { "nvim-treesitter/nvim-treesitter" },
+  }
 end)
