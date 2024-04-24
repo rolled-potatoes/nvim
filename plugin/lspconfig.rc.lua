@@ -10,7 +10,12 @@ end
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "typescript-language-server", "--stdio" }
+  cmd = { "typescript-language-server", "--stdio" },
+   init_options = {
+        preferences = {
+            disableSuggestions = true,
+        },
+    },
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -41,3 +46,5 @@ nvim_lsp.lua_ls.setup {
     }
   }
 }
+
+nvim_lsp.docker_compose_language_service.setup{}
