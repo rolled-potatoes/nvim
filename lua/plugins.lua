@@ -27,8 +27,8 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use {
-    'kyazdani42/nvim-tree.lua',
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+         'nvim-tree/nvim-tree.lua',
+
   }
   use 'kyazdani42/nvim-web-devicons' -- icon
   use {
