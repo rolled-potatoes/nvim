@@ -44,8 +44,8 @@ packer.startup(function(use)
       {"nvim-treesitter/nvim-treesitter"}
     }
   })
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'MunifTanjim/prettier.nvim'
+  -- use 'jose-elias-alvarez/null-ls.nvim'
+  -- use 'MunifTanjim/prettier.nvim'
   use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features

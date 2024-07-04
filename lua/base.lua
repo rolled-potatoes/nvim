@@ -46,3 +46,11 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { 'r' }
+
+-- aie
+vim.bo.omnifunc='ale#completion#OmniFunc'
+vim.g.ale_completion_enabled = 1
+vim.g.ale_completion_autoimport = 1
+vim.g.ale_fixers = { 'prettier', 'eslint' }
+vim.g.ale_javascript_prettier_options = '--single-quote --trailing-comma all'
+vim.g.ale_linters_explicit = 1
