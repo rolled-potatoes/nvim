@@ -19,8 +19,8 @@ local function my_on_attach(bufnr)
   vim.keymap.set('n', 'sv',    api.node.open.vertical,                  opts('Help'))
   vim.keymap.set('n', 'ss',    api.node.open.horizontal,                  opts('Help'))
   vim.keymap.set('n', 's',    function() end,                  opts('Help'))
-
 end
+
 nerdTree.setup({
   on_attach = my_on_attach,
    sort = {
@@ -45,3 +45,5 @@ vim.keymap.set('n','<C-n>t',function()
 end)
 
 vim.keymap.set('n','<C-n>f',':NvimTreeFindFile <CR>')
+vim.keymap.set('n','tu',':NvimTreeResize 100 <CR>')
+vim.keymap.set('n','td',':NvimTreeResize 50 <CR>')
