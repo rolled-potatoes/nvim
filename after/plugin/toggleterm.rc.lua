@@ -9,3 +9,4 @@ toggleterm.setup({
   open_mapping = [[<Leader>t]],
 })
 
+vim.keymap.set("n", "2<C-\\>",":2ToggleTerm<CR>")
