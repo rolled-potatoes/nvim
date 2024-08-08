@@ -43,7 +43,7 @@ else
   keymap.set('n', '<C-w><down>', '<C-w>-')
 
   -- Prettier
-  keymap.set('n', '<Leader>p', ':Prettier<CR>')
+  keymap.set('n', '<Leader>p', ':ALEFix<CR>')
 
   keymap.set('n','<Leader>w',':tabonly<CR>')
   require('custom')

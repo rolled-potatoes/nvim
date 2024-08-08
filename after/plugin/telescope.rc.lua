@@ -56,8 +56,8 @@ vim.keymap.set('n', ';f', function()
     hidden = true,
     previewer = false,
     layout_config = {
-      width = 0.4,
-      height = 0.4,
+      width = 0.8,
+      height = 0.6,
       prompt_position = "top"
     }
   })

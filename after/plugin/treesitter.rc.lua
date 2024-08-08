@@ -6,6 +6,7 @@ ts.setup {
    auto_install = true,
   highlight = {
     enable = true,
+    use_languagetree = true,
     disable = {},
   },
   indent = {

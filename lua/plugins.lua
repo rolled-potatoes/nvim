@@ -35,8 +35,8 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use {
-    'kyazdani42/nvim-tree.lua',
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+         'nvim-tree/nvim-tree.lua',
+
   }
   use 'kyazdani42/nvim-web-devicons' -- icon
   use {
@@ -52,8 +52,8 @@ packer.startup(function(use)
       {"nvim-treesitter/nvim-treesitter"}
     }
   })
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'MunifTanjim/prettier.nvim'
+  -- use 'jose-elias-alvarez/null-ls.nvim'
+  -- use 'MunifTanjim/prettier.nvim'
   use({
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -71,4 +71,8 @@ packer.startup(function(use)
     requires = "nvim-treesitter/nvim-treesitter",
   }
   use 'windwp/nvim-ts-autotag'
+  use {
+    "luckasRanarison/tailwind-tools.nvim",
+    requires = { "nvim-treesitter/nvim-treesitter" },
+  }
 end)
