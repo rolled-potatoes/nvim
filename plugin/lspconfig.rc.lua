@@ -28,6 +28,7 @@ pcall(function()
   }
 end)
 
+
 pcall((function()
   nvim_lsp.cssls.setup {
     on_attach = on_attach,
@@ -52,6 +53,12 @@ pcall(function()
     }
   }
 end)
-pcall(nvim_lsp.docker_compose_language_service)
-pcall(nvim_lsp.tailwindcss.setup);
+
+pcall(function()
+  nvim_lsp.docker_compose_language_service.setup{}
+end)
+
+pcall(function()
+  nvim_lsp.tailwindcss.setup{}
+end);
 

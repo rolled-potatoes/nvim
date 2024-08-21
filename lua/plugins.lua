@@ -74,4 +74,5 @@ packer.startup(function(use)
     "luckasRanarison/tailwind-tools.nvim",
     requires = { "nvim-treesitter/nvim-treesitter" },
   }
+  use "lukas-reineke/indent-blankline.nvim"
 end)
