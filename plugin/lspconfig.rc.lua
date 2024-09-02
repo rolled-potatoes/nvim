@@ -21,24 +21,23 @@ nvim_lsp.tsserver.setup {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-pcall(function()
+if vim.fn.executable('cssmodules-language-server') == 1 then
   nvim_lsp.cssmodules_ls.setup{
     cmd = { "cssmodules-language-server" },
     filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
   }
-end)
+end
 
-
-pcall((function()
+if vim.fn.executable('vscode-css-language-server') == 1 then
   nvim_lsp.cssls.setup {
     on_attach = on_attach,
     cmd = { "vscode-css-language-server", "--stdio" },
     filetypes = { "css", "scss", "less" },
     capabilities = capabilities,
   }
-end))
+end
 
-pcall(function()
+if vim.fn.executable('lua-language-server') == 1 then
   nvim_lsp.lua_ls.setup {
     on_attach = on_attach,
     settings = {
@@ -52,13 +51,15 @@ pcall(function()
       }
     }
   }
-end)
+end
 
-pcall(function()
+if vim.fn.executable('docker_compose_language_service') == 1 then
   nvim_lsp.docker_compose_language_service.setup{}
-end)
+end
 
-pcall(function()
-  nvim_lsp.tailwindcss.setup{}
-end);
+if vim.fn.executable('tailwindcss') == 1 then
+  nvim_lsp.tailwindcss.setup{
+     filetypes = { "javascriptreact", "typescriptreact"},
+  }
+end
 
