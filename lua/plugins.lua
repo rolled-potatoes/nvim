@@ -33,7 +33,8 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons' -- icon
   use {
     'akinsho/bufferline.nvim',
-    tag = 'v2.*'
+    -- tag = "*",
+    requires = 'nvim-tree/nvim-web-devicons'
   }
   use 'norcalli/nvim-colorizer.lua'
   use({
