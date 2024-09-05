@@ -4,7 +4,7 @@ if (not status) then return end
 vim.opt.termguicolors = true
 bufferline.setup{
   options = {
-    mode = "buffers",
+    mode = "tabs",
     separator_style = 'slant',
     always_show_bufferline = false,
     show_buffer_close_icons = false,
