@@ -3,6 +3,7 @@ local status, ts = pcall(require, 'nvim-treesitter.configs')
 if (not status) then return end
 
 ts.setup {
+   auto_install = true,
   highlight = {
     enable = true,
     use_languagetree = true,
@@ -17,6 +18,8 @@ ts.setup {
     'css',
     'html',
     'javascript',
+    'typescript',
+    'html',
     'json',
     'markdown',
     'scss',

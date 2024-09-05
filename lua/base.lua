@@ -6,6 +6,7 @@ vim.opt.fileencoding = 'utf-8'
 
 vim.wo.number = true
 
+vim.opt.relativenumber = false
 vim.opt.title = true
 vim.opt.hlsearch = true
 vim.opt.backup = false
