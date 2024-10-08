@@ -64,3 +64,8 @@ if vim.fn.executable('tailwindcss-language-server') ==1 then
   }
 end
 
+vim.diagnostic.config({
+  virtual_text = false,
+})
+
+vim.keymap.set('n', '<C-d>f', '<Cmd>:lua vim.diagnostic.open_float()<CR>', {})
