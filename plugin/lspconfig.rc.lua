@@ -68,4 +68,4 @@ vim.diagnostic.config({
   virtual_text = false,
 })
 
-vim.keymap.set('n', '<C-d>f', '<Cmd>:lua vim.diagnostic.open_float()<CR>', {})
+vim.keymap.set('n', '<C-g>f', '<Cmd>:lua vim.diagnostic.open_float()<CR>', {})
