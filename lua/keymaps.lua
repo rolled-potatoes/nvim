@@ -46,5 +46,8 @@ else
   keymap.set('n', '<Leader>p', ':ALEFix<CR>')
 
   keymap.set('n','<Leader>w',':tabonly<CR>')
+
+  -- lazy git
+  keymap.set('n', '<Leader>gg', ':LazyGit<CR>')
   require('custom')
 end
