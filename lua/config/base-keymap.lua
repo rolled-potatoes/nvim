@@ -1,0 +1,7 @@
+vim.keymap.set('', 'sh', '<C-w>h')
+vim.keymap.set('', 'sk', '<C-w>k')
+vim.keymap.set('', 'sj', '<C-w>j')
+vim.keymap.set('', 'sl', '<C-w>l')
+vim.keymap.set('n', 'ss', ':split<Return><C-w>w')
+vim.keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
+vim.keymap.set('n', 'te', ':tabedit<Return>')
