@@ -30,10 +30,10 @@ return {
   },
   on_attach = on_attach,
   config = function()
- 	require("nvim-tree").setup {
-		git = {
-			ignore = true
-		}
-	}
+    require("nvim-tree").setup {
+      git = {
+        ignore = true
+      }
+    }
   end,
 }
