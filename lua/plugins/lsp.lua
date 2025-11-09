@@ -1,5 +1,3 @@
-local a = 123;
-
 -- lua/plugins/lsp.lua
 return {
   -- 1. LSP 핵심 설정 (lspconfig)

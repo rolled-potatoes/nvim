@@ -19,3 +19,5 @@ vim.opt.showbreak     = "↳ "
 vim.opt.breakindent   = true
 
 vim.opt.swapfile      = false
+vim.opt.clipboard     = "unnamedplus"
+
