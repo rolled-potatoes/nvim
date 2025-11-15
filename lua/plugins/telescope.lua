@@ -7,7 +7,7 @@ return {
       local telescope = require('telescope')
       telescope.setup {
         defaults = {
-          file_ignore_patters = {
+          file_ignore_patterns = {
             ".git",
             ".DS_Store", 
             "%.cache/",
