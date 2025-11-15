@@ -8,6 +8,8 @@ return {
 			-- === 필수 모듈 로드 ===
 			local lspconfig = require("lspconfig")
 			local mason_lspconfig = require("mason-lspconfig")
+      local cmp_nvim_lsp = require('cmp_nvim_lsp')
+      local capabilities = cmp_nvim_lsp.default_capabilities()
 			-- === 3. Mason 설정 (언어 서버 설치) ===
 			-- Node.js 풀스택 개발을 위한 기본 언어 서버 목록
 			local servers = {
@@ -49,6 +51,7 @@ return {
 			for _, server_name in ipairs(servers) do
 				vim.lsp.config(server_name, {
 					on_attach = on_attach,
+          capabilities = capabilities
 				})
 			end
 		end,
