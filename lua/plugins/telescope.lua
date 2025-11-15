@@ -1,11 +1,24 @@
 -- fuzzy finder: 파일 탐색기
 -- https://github.com/nvim-telescope/telescope.nvim
 return {
-    'nvim-telescope/telescope.nvim', tag = '0.1.9',
+      'nvim-telescope/telescope.nvim', tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       local telescope = require('telescope')
-      telescope.setup {}
+      telescope.setup {
+        defaults = {
+          file_ignore_patters = {
+            ".git",
+            ".DS_Store", 
+            "%.cache/",
+          }
+        },
+        pickers = {
+          find_files = {
+            theme = "dropdown",
+          }
+       },
+      }
 
       local builtin = require('telescope.builtin')
       vim.keymap.set(
