@@ -8,8 +8,8 @@ return {
 			-- === 필수 모듈 로드 ===
 			local lspconfig = require("lspconfig")
 			local mason_lspconfig = require("mason-lspconfig")
-      local cmp_nvim_lsp = require('cmp_nvim_lsp')
-      local capabilities = cmp_nvim_lsp.default_capabilities()
+			local cmp_nvim_lsp = require("cmp_nvim_lsp")
+			local capabilities = cmp_nvim_lsp.default_capabilities()
 			-- === 3. Mason 설정 (언어 서버 설치) ===
 			-- Node.js 풀스택 개발을 위한 기본 언어 서버 목록
 			local servers = {
@@ -31,22 +31,7 @@ return {
 				automatic_installation = true, -- 서버가 없을 경우 자동 설치
 				automatic_enable = true,
 			})
-local function lsp_goto_definition_tab()
-    -- 정의를 찾으면 이동하고, 못 찾으면 경고 메시지 표시
-    vim.lsp.buf.definition({
-        on_success = function(result)
-          print('console.log')
-            -- result가 유효한 경우 (nil이 아니거나, 빈 테이블이 아닌 경우)
-            if result and (not vim.tbl_isempty(result)) then
-                -- 새 탭을 열고 이동합니다.
-                vim.cmd("tabnew")
-                vim.lsp.util.jump_to_location(result)
-            else
-                vim.notify("정의를 찾을 수 없습니다.", vim.log.levels.WARN, { title = "LSP" })
-            end
-        end,
-    })
-end
+
 			local on_attach = function(client, bufnr)
 				-- 도움말, 정의 추적, 코드 액션 등 LSP 핵심 기능 키매핑
 				local opts = { buffer = bufnr, noremap = true, silent = true }
@@ -63,18 +48,12 @@ end
 				vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
 				vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 				vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts)
-
-				vim.keymap.set("n", "<leader>gd", function()
-					vim.cmd("tabnew")
-					vim.lsp.buf.definition()
-				end, opts)
-
 			end
 
 			for _, server_name in ipairs(servers) do
 				vim.lsp.config(server_name, {
 					on_attach = on_attach,
-          capabilities = capabilities
+					capabilities = capabilities,
 				})
 			end
 		end,
