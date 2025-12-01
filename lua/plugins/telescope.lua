@@ -16,7 +16,9 @@ return {
 				},
 			},
 			pickers = {
-				find_files = {},
+				find_files = {
+					theme = "dropdown",
+				},
 			},
 		})
 

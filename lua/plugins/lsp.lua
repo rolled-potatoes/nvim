@@ -36,8 +36,7 @@ return {
 				-- 도움말, 정의 추적, 코드 액션 등 LSP 핵심 기능 키매핑
 				local opts = { buffer = bufnr, noremap = true, silent = true }
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-				-- vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
-				-- vim.keymap.set("n", "gd", lsp_goto_definition_tab, opts)
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 				vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
 				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
