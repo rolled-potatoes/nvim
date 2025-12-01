@@ -5,6 +5,8 @@ return {
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
 		local telescope = require("telescope")
+		local builtin = require("telescope.builtin")
+
 		telescope.setup({
 			defaults = {
 				file_ignore_patterns = {
@@ -14,13 +16,10 @@ return {
 				},
 			},
 			pickers = {
-				find_files = {
-					theme = "dropdown",
-				},
+				find_files = {},
 			},
 		})
 
-		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>ff", function()
 			builtin.find_files({
 				no_ignore = false,
