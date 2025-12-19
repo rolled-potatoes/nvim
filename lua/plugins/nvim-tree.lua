@@ -29,7 +29,6 @@ return {
 			vim.keymap.set("n", "ss", api.node.open.horizontal, opts("가로 분할"))
 		end
 		require("nvim-tree").setup({
-
 			on_attach = on_attach,
 			view = {
 				side = "right",
@@ -37,6 +36,10 @@ return {
 			},
 			git = {
 				ignore = false,
+			},
+			view = {
+				side = "right",
+        width = "50%"
 			},
 		})
 		vim.keymap.set("n", "<C-n>t", ":NvimTreeToggle <CR>")
