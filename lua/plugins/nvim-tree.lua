@@ -32,7 +32,7 @@ return {
 
 			on_attach = on_attach,
 			git = {
-				ignore = true,
+				ignore = false,
 			},
 		})
 		vim.keymap.set("n", "<C-n>t", ":NvimTreeToggle <CR>")
