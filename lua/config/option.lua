@@ -23,3 +23,7 @@ vim.opt.clipboard     = "unnamedplus"
 
 vim.cmd[[colorscheme tokyonight]]
 
+-- 라인 넘버 색상 설정 (진한 흰색)
+vim.api.nvim_set_hl(0, 'LineNr', { fg = '#ffffff', bold = true })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = '#ffffff', bold = true })
+
