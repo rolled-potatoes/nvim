@@ -13,6 +13,9 @@ return {
 					".git",
 					".DS_Store",
 					"%.cache/",
+					"node_modules",
+					"dist",
+					"build",
 				},
 			},
 			pickers = {
