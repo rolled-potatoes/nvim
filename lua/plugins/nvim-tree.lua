@@ -38,8 +38,8 @@ return {
 				ignore = false,
 			},
 			view = {
-				side = "right",
-        width = "50%"
+				side = "left",
+        width = "250"
 			},
 		})
 		vim.keymap.set("n", "<C-n>t", ":NvimTreeToggle <CR>")
