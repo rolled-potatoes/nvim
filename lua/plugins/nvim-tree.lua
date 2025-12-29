@@ -32,8 +32,8 @@ return {
 
 			on_attach = on_attach,
 			view = {
-				side = "right",
-				width = '50%',
+				side = "left",
+				width = '250',
 			},
 			git = {
 				ignore = false,
