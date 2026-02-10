@@ -31,7 +31,7 @@ return {
 
 		vim.keymap.set("n", "<leader>ff", function()
 			builtin.find_files({
-				no_ignore = true,
+				no_ignore = false,
 				hidden = true,
 			})
 		end, { desc = "Telescope find files", noremap = true, silent = true })
